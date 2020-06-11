@@ -5,3 +5,21 @@ type Query {
 type Mutation {
   createUser(username: String!, password: String!, firstname: String!, lastname: String!): User @authen
 }
+
+type User {
+  _id: String
+  username: String
+  password: String
+  firstname: String
+  lastname: String
+  email: String
+  profileId: String
+  isEnabled: Boolean
+  sessionId: String
+  createdAt: Float
+  updatedAt: Float
+}
+
+type ResultLogin {
+  token: String
+}

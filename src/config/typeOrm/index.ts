@@ -10,10 +10,9 @@ const TypeOrm: TypeOrmModuleOptions = {
   entities: ['dist/**/*.entity{.ts,.js}'],
   keepConnectionAlive: true,
   synchronize: true,
-  useUnifiedTopology: true
-
-  // username: '',
-  // password: '',
+  useUnifiedTopology: true,
+  // username: 'thanhthai',
+  // password: 'thai123',
   // name: 'mainDb', // use name database must use createConnect('<name>') of typeorm
   // logging: true,
   // url: '',

@@ -7,7 +7,7 @@ export const SYS_MODE = process.env.SYS_MODE || 'dev'
 export const PORT = process.env.PORT || 'dev'
 
 // type orm
-export const ORM_DB_HOST = process.env.ORM_HOST || 'localhost'
+export const ORM_DB_HOST = process.env.ORM_DB_HOST || 'localhost'
 export const ORM_DB_PORT: number = parseInt(process.env.ORM_DB_PORT) || 27017
 export const ORM_DB_NAME = process.env.ORM_DB_NAME
 
