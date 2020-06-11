@@ -1,3 +1,0 @@
-type ResultLogin {
-  token: String
-}

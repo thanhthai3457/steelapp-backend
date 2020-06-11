@@ -1,0 +1,23 @@
+type Query {
+  getStores: [StoreShop] @authen
+  getStore(id: String!): StoreShop @authen
+}
+
+type StoreShop {
+  _id: String
+  code: String
+  name: String
+  mobile: String
+  address: String
+  isActive: Boolean
+  isShop: Boolean
+  indexRetail: Float
+  indexStockControl: Float
+  indexWholesale: Float
+  indexImport: Float
+  indexExport: Float
+  createdAt: Float
+  createdBy: User
+  updatedAt: Float
+  updatedBy: User
+}

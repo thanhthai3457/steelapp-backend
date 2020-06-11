@@ -50,7 +50,7 @@ export class UserResolve {
       const { username, password } = args
       const userExisted = await getMongoRepository(UserEntity).findOne({
         username,
-        isEnabled: true
+
       })
       if (!userExisted) return
       const passHashByCryptoJS = await CryptoJS.SHA256(password).toString()
