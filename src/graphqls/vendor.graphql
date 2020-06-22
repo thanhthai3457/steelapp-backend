@@ -1,0 +1,21 @@
+type Query {
+  getVendors: [Vendor] @authen
+  getVendor(id: String!): Vendor @authen
+}
+
+type Vendor {
+  _id: String
+  code: String
+  name: String
+  mobile: String
+  address: String
+  email: String
+  taxCode: String
+  accountingObjectId: String
+  contactPerson: String
+  isActive: Boolean
+  createdAt: Float
+  createdBy: User
+  updatedAt: Float
+  updatedBy: User
+}

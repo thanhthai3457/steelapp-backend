@@ -1,9 +1,9 @@
 import { Entity, ObjectIdColumn, Column } from 'typeorm'
-import { IsString, IsNumber, IsBoolean } from 'class-validator'
+import { IsString, IsBoolean } from 'class-validator'
 import { User } from './interface.entity'
 
-@Entity({ name: 'stores' })
-export class StoreShop {
+@Entity({ name: 'vendors' })
+export class Vendor {
   @ObjectIdColumn()
   @IsString()
   _id: string
@@ -29,28 +29,20 @@ export class StoreShop {
   isActive: boolean
 
   @Column()
-  @IsBoolean()
-  isShop: boolean
+  @IsString()
+  taxCode: string
 
   @Column()
-  @IsNumber()
-  indexRetail: number
+  @IsString()
+  accountingObjectId: string
 
   @Column()
-  @IsNumber()
-  indexStockControl: number
+  @IsString()
+  contactPerson: string
 
   @Column()
-  @IsNumber()
-  indexWholesale: number
-
-  @Column()
-  @IsNumber()
-  indexImport: number
-
-  @Column()
-  @IsNumber()
-  indexExport: number
+  @IsString()
+  email: string
 
   @Column()
   createdAt: number
@@ -64,9 +56,9 @@ export class StoreShop {
   @Column()
   updatedBy: User
 
-  constructor(store: any) {
-    if (store) {
-      Object.assign(this, store)
+  constructor(vendor: any) {
+    if (vendor) {
+      Object.assign(this, vendor)
     }
   }
 }
